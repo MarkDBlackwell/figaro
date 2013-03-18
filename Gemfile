@@ -4,7 +4,11 @@ gemspec
 
 gem "rails", ">= 3.0.2", "< 5"
 
-gem "aruba", "~> 0.5.1"
-gem "cucumber", "~> 1.2.1"
-gem "rake", "~> 10.0.3"
-gem "rspec", "~> 2.13.0"
+group :test do
+  gem "aruba", "~> 0.5"
+  gem "coveralls", "~> 0.6", :require => false
+  gem "cucumber", "~> 1.2"
+  gem "rake", "~> 10.0"
+  gem "rspec", "~> 2.13"
+  gem "simplecov", "~> 0.7", :require => false
+end

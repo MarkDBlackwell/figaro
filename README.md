@@ -1,4 +1,9 @@
-# Figaro [![Build](https://travis-ci.org/laserlemon/figaro.png?branch=master)](https://travis-ci.org/laserlemon/figaro) [![Code Climate](https://codeclimate.com/github/laserlemon/figaro.png)](https://codeclimate.com/github/laserlemon/figaro)
+# Figaro
+[![Gem Version](https://badge.fury.io/rb/figaro.png)](http://badge.fury.io/rb/figaro)
+[![Build Status](https://travis-ci.org/laserlemon/figaro.png?branch=master)](https://travis-ci.org/laserlemon/figaro)
+[![Code Climate](https://codeclimate.com/github/laserlemon/figaro.png)](https://codeclimate.com/github/laserlemon/figaro)
+[![Coverage Status](https://coveralls.io/repos/laserlemon/figaro/badge.png?branch=master)](https://coveralls.io/r/laserlemon/figaro)
+[![Dependency Status](https://gemnasium.com/laserlemon/figaro.png)](https://gemnasium.com/laserlemon/figaro)
 
 Simple Rails app configuration
 
@@ -12,8 +17,6 @@ Figaro provides a clean and simple way to configure your app and keep the privat
 
 ## How does it work?
 
-It works really well.
-
 There are a few similar solutions out there, and a lot of homegrown attempts. Most namespace your configuration under a `Config` (or similar) namespace. That's fine, but there's already a place to describe the application environment… `ENV`!
 
 `ENV` is a collection of simple string key/value pairs and it works just great for application configuration.
@@ -22,19 +25,19 @@ As an added bonus, this is exactly how apps on [Heroku](http://www.heroku.com/) 
 
 ## Give me an example.
 
-Okay. Add Figaro to your bundle:
+Okay. Add Figaro to your Gemfile and run the `bundle` command to install it:
 
 ```ruby
 gem "figaro"
 ```
 
-Next up, install Figaro:
+Next up, use the generator provided by Figaro:
 
 ```bash
 rails generate figaro:install
 ```
 
-This generates a commented `config/application.yml` file and ignores it in your `.gitignore`. Add your own configuration to this file and you're done!
+This creates a commented `config/application.yml` file and ignores it in your `.gitignore`. Add your own configuration to this file and you're done!
 
 Your configuration will be available as key/value pairs in `ENV`. For example, here's `config/initializers/pusher.rb`:
 
